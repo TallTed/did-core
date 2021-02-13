@@ -2029,9 +2029,16 @@ key agreement protocols with the <a>DID subject</a>&mdash;the value of the
 <code><a>keyAgreement</a></code> property needs to be used for that.
       </p>
       <p>
-This specification defines several <a>verification relationships</a> below. A
-<a>DID document</a> MAY include any of these, or other properties, to express
-a specific <a>verification relationship</a>. In order to maximize global
+The <a>DID document</a> does not express revoked keys using a <a>verification
+relationship</a>. If a referenced verification method is not in the <a>DID
+Document</a> used to dereference it, then that verification method is considered
+invalid or revoked. Each <a>DID method</a> specification is expected to detail
+how revocation is performed and tracked.
+      </p>
+      <p>
+The following sections define several common <a>verification relationships</a>
+below. A <a>DID document</a> MAY include any of these, or other properties, to
+express a specific <a>verification relationship</a>. In order to maximize global
 interoperability, any such properties used SHOULD be registered in the DID
 Specification Registries [[?DID-SPEC-REGISTRIES]].
       </p>
